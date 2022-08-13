@@ -1,10 +1,13 @@
-use std::time::Duration;
+use std::{env::args, time::Duration};
 
 use print_bytes::print_bytes;
 
 fn main() {
-    let vendor_id = 0x54c;
-    let product_id = 0x9cc;
+    let argz = args().collect::<Vec<_>>();
+
+    // 1356, 2508
+    let vendor_id: u16 = argz[1].parse().unwrap();
+    let product_id: u16 = argz[2].parse().unwrap();
 
     let mut device = hid::init()
         .unwrap()
