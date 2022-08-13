@@ -1,0 +1,10 @@
+[package]
+name = "hidproxy"
+version = "0.1.0"
+authors = ["Jakub Kozłowski <kubukoz@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+hid = "0.4.1"
+print_bytes = "0.6.0"
+# hidapi = "1.4.1"
